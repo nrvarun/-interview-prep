@@ -1,7 +1,29 @@
+<!doctype html>
 html
   include ./base/head.pug
 
-  body.text-center.d-flex
-    .d-block.m-auto
-      h2 A bad ass Webpack 4 boilerplate that uses Pug, Scss and ES6+
-      img.webpack-diagram(src="./assets/img/webpack.png")
+  body
+    main
+      .container
+        .row.mt-5
+          .col-xl-6
+            ul
+              include ./components/mixins.pug
+              li
+                h4.mb-4 Functional Req. - HTML5/CSS/JS(OOPS)/React
+              li
+                +radio("HTML5 - Features, Semantics, Meta tags, Web Workers.","html5","html5", true)
+              li
+                +radio("CSS - CSS-in-JS, Pre-Processors, Box modals, Responsiveness, Diff Approaches for Responsives Design","css","css", false)
+              li
+                +radio("JS - OOPs, Prototypal Inheritance, Polymorphism, Encapsulation, Abstraction, Design Patterns. Apply Call bind, Async Await, Promises","js","js", false)
+              li.mb-4
+                +radio("React - LifeCycles, Redux Thunk, ReduxSaga, Hooks, Prop Drilling, Connect Method","react","react", false)
+              li
+                h4.mb-4 NFR - Security,Perf,Accessibility,DevOps
+              li
+                +radio("Security (Tools, Attacks, Preventions, CSRF, XSS etc...)","security","security", false)
+              li
+                +radio("performance (Tools, metrics and web vitals)","performance","performance", false)
+              li
+                +radio("Accessibility - Testing tools, Guidelines(ARIA, A, AA, AAA), Validators, Semantic Tags","accessibility","accessibility", true)

@@ -1,0 +1,16 @@
+.radio {
+  display: flex;
+  align-items: center;
+
+  span {
+    text-transform: capitalize;
+  }
+
+  input {
+    margin: 0 10px 0 0;
+
+    &:checked + span {
+      text-decoration: line-through;
+    }
+  }
+}

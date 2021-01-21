@@ -1,0 +1,8 @@
+mixin radio(title, value, id, isChecked)
+    label.radio(for=id)
+        if isChecked === true
+            input(id=id type="checkbox", name=value value=value checked)
+        else
+            input(id=id type="checkbox", name=value value=value)
+
+        span=title
