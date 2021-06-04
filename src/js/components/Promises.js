@@ -1,10 +1,11 @@
+/* eslint-disable compat/compat */
 let myPromise = new Promise((res, rej) => {
   if (true) {
-    res("success");
+    res('success');
   } else {
-    rej("failure");
+    rej('failure');
   }
-}).catch((error) => console.log("Error:", error));
+}).catch((error) => console.log('Error:', error));
 
 myPromise
   .then((success) => console.log(success))
@@ -33,15 +34,15 @@ Promise.all([
 
 //Promise.race
 const promiseOne = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+  setTimeout(resolve, 500, 'one');
 });
 
 const promiseTwo = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, "two");
+  setTimeout(reject, 100, 'two');
 });
 
 Promise.race([promiseOne, promiseTwo]).then((result) => {
-  console.log("Race success,", result); // 'two'
+  console.log('Race success,', result); // 'two'
 });
 
 // // Function to fetch Github info of a user.
@@ -91,7 +92,7 @@ Output:
 */
 
 setTimeout(() => {
-  console.log("first");
+  console.log('first');
 }, 0);
 
-console.log("second");
+console.log('second');

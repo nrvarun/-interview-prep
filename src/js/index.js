@@ -9,6 +9,8 @@ import "./components/Prototype";
 import "./components/AsyncAwait";
 import "./components/Array";
 
+import './components/Debounce-Throttle';
+
 //Javascript: The Hard Parts v2 Front End
 import "./components/Functions";
 import "./components/OOP";
